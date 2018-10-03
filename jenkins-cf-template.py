@@ -9,7 +9,7 @@ from troposphere import (
  Ref,
  Template,
 )
-from troposhere.iam import (
+from troposphere.iam import (
  InstanceProfile,
  PolicyType as IAMPolicy,
  Role,
@@ -62,7 +62,7 @@ t.add_resource(ec2.SecurityGroup(
  ],
 ))
 
-t.add_resoure(Role(
+t.add_resource(Role(
  "Role",
  AssumeRolePolicyDocument=Policy(
   Statement=[
