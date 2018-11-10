@@ -202,7 +202,7 @@ t.add_resource(LaunchConfiguration(
 ))
 
 t.add_resource(AutoScalingGroup(
- "AutoScalingGroup",
+ "AutoscalingGroup",
  DesiredCapacity=Ref("ScaleCapacity"),
  LaunchConfigurationName=Ref("LaunchConfiguration"),
  MinSize=2,
