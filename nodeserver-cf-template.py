@@ -242,7 +242,7 @@ t.add_resource(Alarm(
  ComparisonOperator="LessThanThreshold",
  AlarmActions=[Ref("ScaleDownPolicy")],
 ))
-t.add_resouce(Alarm(
+t.add_resource(Alarm(
  "CPUTooHigh",
  AlarmDescription="Alarm if CPU too high",
  Namespace="AWS/EC2",
@@ -257,7 +257,7 @@ t.add_resouce(Alarm(
  Period="60",
  EvaluationPeriods="1",
  Threshold="60",
- ComparisionOperator="GreaterThanThreshold",
+ ComparisonOperator="GreaterThanThreshold",
  AlarmActions=[Ref("ScaleUpPolicy")],
  InsufficientDataActions=[Ref("ScaleUpPolicy")],
 ))
@@ -266,7 +266,7 @@ t.add_output(Output(
  "WebUrl",
  Description="Application endpoint",
  Value=Join("", [
-  "http://", GetAttr("LoadBalancer", "DNSName"),
+  "http://", GetAtt("LoadBalancer", "DNSName"),
   ":", ApplicationPort
  ]),
 ))
