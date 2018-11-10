@@ -217,7 +217,7 @@ t.add_resource(ScalingPolicy(
  AutoScalingGroupName=Ref("AutoscalingGroup"),
  AdjustmentType="ChangeInCapacity",
 ))
-t.add_resouce(ScalingPolicy(
+t.add_resource(ScalingPolicy(
  "ScaleUpPolicy",
  ScalingAdjustment="1",
  AutoScalingGroupName=Ref("AutoscalingGroup"),
