@@ -185,7 +185,7 @@ t.add_output(Output(
 t.add_output(Output(
   "VpcId",
   Description="VpcId",
-  Value=Ref("VpnId"),
+  Value=Ref("VpcId"),
   Export=Export(Sub("${AWS::StackName}-vpc-id")),
 ))
 t.add_output(Output(
